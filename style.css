@@ -1,46 +1,88 @@
-section{
+section {
     padding-top: 128px;
+    position: relative;
 }
 
-.btn{
+section::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    font-size: 72px;
+    font-weight: 700;
+    color: #c7c7c7;
+    opacity: 0.25;
+    top: 10px;
+    left: 10px;
+}
+
+.btn {
     border: 3px solid #000000;
     border-radius: 24px;
-
 }
-.btn:hover{
+
+.btn:hover {
     border: 3px solid #000000;
     background-color: #000000;
     color: #f4f4f4;
 }
 
-.navbar{
+.navbar {
     background-color: #f4f4f4;
-    box-shadow: 0 0  10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.home{
-    h1{
-        font-size: 72px;
-    }
-    h3{
-        font-size: 64px;
-    }
-
-    .arrow{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-
-        img{
-            width: 60px;
-        }
-    }
-
-    #arow {
-        animation: 2s upDown infinite;
-    }
+.home h1 {
+    font-size: 72px;
 }
+
+.home h3 {
+    font-size: 64px;
+}
+
+.arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.arrow img {
+    width: 60px;
+}
+
+#arow {
+    animation: 2s upDown infinite;
+}
+
+.about::before {
+    content: 'About';
+}
+
+.about-exp-item {
+    margin-top: 32px;
+}
+
+.about-exp-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-exp-item-detail {
+    display: none;
+}
+.btn .button:hover {
+    border: 3px solid #000000;
+    background-color: #000000;
+    color: #f4f4f4;
+}
+
+.btn.button.activeDetails {
+    border: 3px solid #000000;
+    background-color: #000000;
+    color: #f4f4f4;
+}
+
 @keyframes upDown {
     0% {
         transform: translateY(0);
