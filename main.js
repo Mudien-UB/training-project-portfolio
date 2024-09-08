@@ -13,3 +13,26 @@ if($(target).hasClass("activeDetails")){
     $(detail).slideToggle()
 
 }
+
+function onFormSubmit(e){
+    e.preventDefault()
+    const email = $("#inp_email")
+    const subject = $("#inp_subject")
+    const message = $("#inp_message")
+
+if(!$(email).val() && !$(subject).val() && !$(message).val() ){
+        alert("Fill the form")
+    }else if(!$(email).val()){
+        alert("Email is requiered")
+    }else if(!$(subject).val()){
+        alert("Subject is requiered")
+    }else if(!$(message).val()){
+        alert("Message is requiered")
+    }else{
+        alert("Form Submitted")
+        $(email).val("")
+        $(subject).val("")
+        $(message).val("")
+    }
+
+}
